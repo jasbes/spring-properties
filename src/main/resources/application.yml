@@ -7,15 +7,15 @@ welcome:
   messages:
     purpose: Properties loaded with @ConfigurationProperties annotation
     hello:
-      en: Hello, World!
-      es: Hola, Mundo!
-      fr: Bonjour, le Monde!
-      pt: Olá, Mundo!
+      EN: Hello, World!
+      ES: Hola, Mundo!
+      FR: Bonjour, le Monde!
+      PT: Olá, Mundo!
     welcome:
-      en: Welcome to the Spring Properties Demo!
-      es: Bienvenido al Demo de Propiedades de Spring!
-      fr: Bienvenue dans la d?mo des propri?t?s de printemps!
-      pt: Bem-vindo ao Demo de Propriedades de Primavera!
+      EN: Welcome to the Spring Properties Demo!
+      ES: Bienvenido al Demo de Propiedades de Spring!
+      FR: Bienvenue dans la d?mo des propri?t?s de printemps!
+      PT: Bem-vindo ao Demo de Propriedades de Primavera!
     nested:
       label: Nested Properties
       value: This is a nested property value
@@ -25,3 +25,6 @@ welcome:
       - item3
       - item4
       - item5
+
+# Properties loaded with @Value annotation
+
