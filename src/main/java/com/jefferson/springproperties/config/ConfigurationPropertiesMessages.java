@@ -5,14 +5,18 @@ import com.jefferson.springproperties.records.PropertyHolder;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 
 import java.util.List;
 import java.util.Map;
 
+@Primary
+@Profile("configurations-properties")
 @Slf4j
 @ConfigurationProperties(prefix = "welcome.messages", ignoreUnknownFields = false)
-public record WelcomeMessages(String purpose, Map<MessageLanguage, String> hello, Map<MessageLanguage, String> welcome,
-                              PropertyHolder nested, List<String> list) {
+public record ConfigurationPropertiesMessages(String purpose, Map<MessageLanguage, String> hello, Map<MessageLanguage, String> welcome,
+                              PropertyHolder nested, List<String> list) implements PropertyMessage {
     @PostConstruct
     public void printProperties() {
         log.info("Loaded properties: {}", this);
